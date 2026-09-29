@@ -1,4 +1,5 @@
 # 🛡️ ThreatLens AI
+![ThreatLens CI](https://github.com/GRenusri/ThreatLensAI/actions/workflows/ci.yml/badge.svg)
 
 ThreatLens AI is an AI-assisted SOC incident triage project that combines Microsoft Sentinel detections, deterministic security analysis, MITRE ATT&CK context, local LLM analysis, deterministic AI-output validation, and mandatory human analyst review.
 
@@ -480,14 +481,6 @@ backend/data/sentinel_incidents.json
 ```
 
 The dataset contains representative structured payloads derived from controlled Sentinel lab incidents.
-
-The preserved incident IDs are intentionally:
-
-```text
-1, 3, 4
-```
-
-Incident ID `2` was a second validation instance of the same local-account-creation detection and was not included as a separate representative ThreatLens scenario.
 
 This project does **not** claim that the current MVP retrieves these incidents through the live Microsoft Sentinel API.
 
