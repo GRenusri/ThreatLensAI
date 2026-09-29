@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "source": "Identity",
+    "alert_type": "Impossible Travel",
+    "user": "admin@company.com",
+    "severity": "High",
+    "description": "User logged in from USA and Russia within 10 minutes."
+  },
+  {
+    "id": 2,
+    "source": "Cloud",
+    "alert_type": "Public Storage Bucket",
+    "resource": "customer-data-bucket",
+    "severity": "Critical",
+    "description": "Cloud storage bucket is publicly accessible."
+  },
+  {
+    "id": 3,
+    "source": "Kubernetes",
+    "alert_type": "Cluster Admin Granted",
+    "user": "dev-user",
+    "severity": "High",
+    "description": "User was granted cluster-admin permissions."
+  }
+]

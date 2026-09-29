@@ -1,0 +1,47 @@
+[
+  {
+    "incident_id": 1,
+    "title": "Linux - New Local User Account Created",
+    "severity": "Medium",
+    "status": "Resolved",
+    "source": "Microsoft Sentinel",
+    "host": "soc-linux-01",
+    "target_account": "sentinel-alert-test",
+    "tactic": "Persistence",
+    "technique": "T1136.001",
+    "technique_name": "Local Account",
+    "authorized_test": true
+  },
+  {
+    "incident_id": 3,
+    "title": "Linux - User Added to Sudo Group",
+    "severity": "Medium",
+    "status": "Resolved",
+    "source": "Microsoft Sentinel",
+    "host": "soc-linux-01",
+    "target_account": "sudo-detection-test",
+    "tactic": "Persistence / Privilege Escalation",
+    "technique": "T1098.007",
+    "technique_name": "Additional Local or Domain Groups",
+    "authorized_test": true
+    
+  },
+  {
+    "incident_id": 4,
+    "title": "Linux - Repeated Failed SSH Authentication",
+    "severity": "Medium",
+    "status": "Resolved",
+    "source": "Microsoft Sentinel",
+    "host": "soc-linux-01",
+    "target_account": "fake-soc-user",
+    "source_ip": "192.168.145.1",
+    "failed_attempts": 3,
+    "first_attempt": "2026-09-24T21:37:49Z",
+    "last_attempt": "2026-09-24T21:37:59Z",
+    "tactic": "Credential Access",
+    "technique": "T1110.001",
+    "technique_name": "Password Guessing",
+    "authorized_test": true,
+    "successful_authentication": false
+  }
+]
