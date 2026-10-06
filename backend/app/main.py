@@ -5,12 +5,15 @@ from backend.app.Security.input_validator import validate_input
 from backend.app.triage.triage_engine import triage_incident
 from backend.app.ai.ollama_service import generate_ai_summary
 from backend.app.ai.output_validator import validate_ai_output
+from backend.app.investigations_api import router as investigations_router
 
 app = FastAPI(
     title="ThreatLens AI",
     description="AI-Powered Security Triage Platform",
     version="0.1.0"
 )
+
+app.include_router(investigations_router)
 
 @app.get("/")
 def home():
