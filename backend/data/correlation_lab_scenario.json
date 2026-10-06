@@ -1,0 +1,77 @@
+{
+  "scenario_id": "correlation-lab-001",
+  "scenario_name": "Controlled Linux Identity Correlation Lab",
+  "host": "soc-linux-01",
+  "primary_account": "ctl-corr-user",
+  "decoy_account": "ctl-decoy-user",
+  "authorized_test": true,
+  "events": [
+    {
+      "event_id": "corr-ssh-001",
+      "event_type": "failed_ssh_authentication",
+      "timestamp": "2026-10-05T23:44:21.105Z",
+      "host": "soc-linux-01",
+      "target_account": "ctl-corr-user",
+      "source_ip": "192.168.145.1",
+      "process_name": "sshd-session",
+      "authentication_result": "failed",
+      "account_state_at_event": "invalid_user"
+    },
+    {
+      "event_id": "corr-ssh-002",
+      "event_type": "failed_ssh_authentication",
+      "timestamp": "2026-10-05T23:44:37.911Z",
+      "host": "soc-linux-01",
+      "target_account": "ctl-corr-user",
+      "source_ip": "192.168.145.1",
+      "process_name": "sshd-session",
+      "authentication_result": "failed",
+      "account_state_at_event": "invalid_user"
+    },
+    {
+      "event_id": "corr-ssh-003",
+      "event_type": "failed_ssh_authentication",
+      "timestamp": "2026-10-05T23:44:42.064Z",
+      "host": "soc-linux-01",
+      "target_account": "ctl-corr-user",
+      "source_ip": "192.168.145.1",
+      "process_name": "sshd-session",
+      "authentication_result": "failed",
+      "account_state_at_event": "invalid_user"
+    },
+    {
+      "event_id": "corr-account-001",
+      "event_type": "local_account_created",
+      "timestamp": "2026-10-06T00:08:39.271Z",
+      "host": "soc-linux-01",
+      "target_account": "ctl-corr-user",
+      "uid": 1001,
+      "gid": 1001,
+      "home_directory": "/home/ctl-corr-user",
+      "shell": "/bin/bash",
+      "source": "/dev/pts/1",
+      "process_name": "useradd"
+    },
+    {
+      "event_id": "corr-sudo-001",
+      "event_type": "sudo_group_addition",
+      "timestamp": "2026-10-06T00:17:14.242Z",
+      "host": "soc-linux-01",
+      "target_account": "ctl-corr-user",
+      "process_name": "usermod"
+    },
+    {
+      "event_id": "corr-decoy-001",
+      "event_type": "local_account_created",
+      "timestamp": "2026-10-06T00:24:44.288Z",
+      "host": "soc-linux-01",
+      "target_account": "ctl-decoy-user",
+      "uid": 1002,
+      "gid": 1002,
+      "home_directory": "/home/ctl-decoy-user",
+      "shell": "/bin/bash",
+      "source": "/dev/pts/1",
+      "process_name": "useradd"
+    }
+  ]
+}
